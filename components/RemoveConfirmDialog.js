@@ -4,6 +4,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Typography from '@mui/material/Typography';
 
 const RemoveConfirmDialog = (props) => {
   const { open, onDismiss, handleConfirm, item } = props;
@@ -14,7 +15,9 @@ const RemoveConfirmDialog = (props) => {
       onClose={onDismiss}
     >
       <DialogTitle>
-        Remove Confirmation
+        <Typography variant="h4">
+          Remove Confirmation
+        </Typography>
       </DialogTitle>
       <DialogContent>
         <DialogContentText>
@@ -22,7 +25,7 @@ const RemoveConfirmDialog = (props) => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onDismiss}>Nope</Button>
+        <Button onClick={onDismiss}>No</Button>
         <Button onClick={handleConfirm} autoFocus>
           Yes
         </Button>

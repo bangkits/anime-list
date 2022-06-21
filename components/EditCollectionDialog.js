@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -60,10 +61,16 @@ export default function EditCollectionDialog(props) {
   return (
     <div>
       <Dialog open={open} onClose={onDismiss}>
-        <DialogTitle>Edit Collection</DialogTitle>
+        <DialogTitle>
+          <Typography variant="h4">
+            Edit Collection
+          </Typography>
+        </DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            Please Input Collection Name
+          <DialogContentText> 
+            <Typography variant="h6">
+              Please input collection name
+            </Typography>
           </DialogContentText>
           <TextField
             autoFocus

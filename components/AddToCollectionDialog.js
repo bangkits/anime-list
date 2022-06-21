@@ -123,14 +123,14 @@ const AddToCollectionDialog = (props) => {
         aria-labelledby="responsive-dialog-title"
       >
         <DialogTitle id="responsive-dialog-title">
-          Collection List
+          <Typography variant="h3">Collection List</Typography>
         </DialogTitle>
         <DialogContent>
           <AddCollection collection={collection} />
-          {collection.length === 0 && <Typography css={{ marginTop: 40 }}>Please Add Collection to Save Anime</Typography>}
+          {collection.length === 0 && <Typography css={{ marginTop: 40 }} variant="h6">Please add collection to save anime</Typography>}
           {collection.length > 0 &&
             <FormGroup>
-              <Typography>Please Choose Collection to Save Anime</Typography>
+              <Typography variant="h6">Please choose collection to save anime</Typography>
               {collection.map(({ id, name }) => {
                 const collected = collectionInfo.find(v => v.collectionId === id);
 
