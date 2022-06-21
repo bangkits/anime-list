@@ -73,6 +73,12 @@ const AddToCollectionDialog = (props) => {
     });
   };
 
+  const handleFieldClick = (collected) => {
+    if(collected) {
+      setErrorSnackbar('Can not save the same anime in one collection');
+    }
+  };
+
   const handleSaveAnime = () => {
     let payload = [];
     const anyChecked = Object.entries(selectedCollection).find(item => item[1] === true);
@@ -142,6 +148,7 @@ const AddToCollectionDialog = (props) => {
                   }
                   label={name}
                   disabled={collected}
+                  onClick={() => handleFieldClick(collected)}
                 />)
               }
               )}
