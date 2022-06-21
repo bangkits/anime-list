@@ -1,1 +1,1 @@
-export { default } from './AnimeList.container'
+export { default } from './animeList.container'

@@ -5,7 +5,7 @@ import { compose, withProps } from "recompose";
 import { selectState } from "../../reducer/collection.slice";
 import { useAppSelector } from "../../reducer/hooks";
 
-import AnimeListComponent from "./AnimeList.component";
+import AnimeListComponent from "./animeList.component";
 
 const AnimeListContainer = (props) => <AnimeListComponent {...props} />
 
